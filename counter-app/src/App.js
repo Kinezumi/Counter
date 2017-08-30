@@ -1,30 +1,16 @@
 import React from 'react';
+import Counter from './Counter';
+import CounterWrapper from './CounterWrapper';
 
-class Counter extends React.Component {
-    state = {value: 0};
-    
-    increment = () => {
-        this.setState({value: this.state.value + 1});
-    }
-    
-    decrement = () => {
-        this.setState({value: this.state.value - 1});
-    }
-    
-    reset = () => {
-        this.setState({value: this.state.value = 0});
-    }
+class App extends React.Component {
     
     render(){
         return(
             <div>
-                <div>{this.state.value}</div>
-                <button onClick={this.increment}>+</button>
-                <button onClick={this.decrement}>-</button>
-                <button onClick={this.reset}>reset</button>
+                <CounterWrapper />
             </div>
-        )
+        );
     }
 }
 
-export default Counter;
+export default App;
